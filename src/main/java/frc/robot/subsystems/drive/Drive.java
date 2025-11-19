@@ -72,7 +72,7 @@ public class Drive extends SubsystemBase implements Vision.VisionConsumer {
             };
     private final SwerveDrivePoseEstimator poseEstimator =
             new SwerveDrivePoseEstimator(kinematics, rawGyroRotation, lastModulePositions, new Pose2d());
-    private final Consumer<Pose2d> resetSimulationPoseCallBack;
+    private final Consumer<Pose2d> resetSimulationPoseCallBack; // Default to field-oriented control
 
     public Drive(
             GyroIO gyroIO,
